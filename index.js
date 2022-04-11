@@ -16,4 +16,4 @@ client.on('ready', () => {
   });
 
 //client.login(token)
-client.login()
+client.login(process.env.GMZZ_TOKEN)
