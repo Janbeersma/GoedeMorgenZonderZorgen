@@ -1,7 +1,7 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 //const {token} = require('./config.json')
-const begroetingen = ["goedemorgen", "Goedemorgen", "goeiemoggel", "Goeiemoggel", "goededag", "Goededag", "mogguh", "Mogguh", "schöne daag", "Schöne daag", "morning", "Morning", "morgen", "Morgen", "mogge", "Mogge", "goedemoggel", "Goedemoggel", "goede moggel", "Goede moggel"]
+const begroetingen = ["goedemorgen", "Goedemorgen", "goeiemoggel", "Goeiemoggel", "goededag", "Goededag", "mogguh", "Mogguh", "schöne daag", "Schöne daag", "morning", "Morning", "mogge", "Mogge", "goedemoggel", "Goedemoggel", "goede moggel", "Goede moggel"]
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
