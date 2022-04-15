@@ -18,6 +18,7 @@ client.on('messageCreate', async msg => {
 });
 
 function search(needles, haystack) {
+  haystack.toLowerCase()
   return needles.some(needle => haystack.includes(needle.toLowerCase()))
 }
 
