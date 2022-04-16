@@ -6,7 +6,7 @@ const reactions = require('./reactions.json');
 function activateAfter5seconds() {
   return new Promise(resolve => {
     setTimeout(() => {
-    }, 5000);
+    }, 10000);
   });
 }
 
