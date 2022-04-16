@@ -21,8 +21,8 @@ client.on('messageCreate', async msg => {
   for (const [emoji, words] of Object.entries(reactions)) {
 
     if (search(words, msg.content))
-      creationlog = activateAfter5seconds();
-      console.log(creationlog);
+    creationlog = activateAfter5seconds();
+    console.log(creationlog);
       msg.react(emoji)
   }
 });
