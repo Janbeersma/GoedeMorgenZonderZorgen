@@ -6,7 +6,7 @@ const reactions = require('./reactions.json');
 function activateAfter5seconds() {
   return new Promise(resolve => {
     setTimeout(() => {
-    resolve('message created')
+    resolve('message created');
     }, 5000);
   });
 }
@@ -15,14 +15,14 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('messageCreate', async msg => {
-  const creationlog = activateAfter5seconds();
-  console.log(creationlog);
+client.on('messageCreate', async msg => {  
   if (msg.author.bot) return
 
   for (const [emoji, words] of Object.entries(reactions)) {
 
     if (search(words, msg.content))
+      creationlog = activateAfter5seconds();
+      console.log(creationlog);
       msg.react(emoji)
   }
 });
