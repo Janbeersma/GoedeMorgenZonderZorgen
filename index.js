@@ -3,6 +3,13 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const reactions = require('./reactions.json');
 //const {token} = require('./config.json')
 
+function activateAfter5seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+    }, 5000);
+  });
+}
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -13,6 +20,7 @@ client.on('messageCreate', async msg => {
   for (const [emoji, words] of Object.entries(reactions)) {
 
     if (search(words, msg.content))
+      activateAfter5seconds();
       msg.react(emoji)
   }
 });
