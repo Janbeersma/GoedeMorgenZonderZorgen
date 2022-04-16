@@ -20,12 +20,12 @@ client.on('messageCreate', async msg => {
   for (const [emoji, words] of Object.entries(reactions)) {
 
     if (search(words, msg.content))
-      activateAfter5seconds();
       msg.react(emoji)
   }
 });
 
 function search(needles, haystack) {
+  activateAfter5seconds();
   return needles.some(needle => haystack.includes(needle))
 }
 
