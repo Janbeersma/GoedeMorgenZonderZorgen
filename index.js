@@ -15,6 +15,7 @@ client.on('ready', () => {
 });
 
 client.on('messageCreate', async msg => {
+  activateAfter5seconds();
   if (msg.author.bot) return
 
   for (const [emoji, words] of Object.entries(reactions)) {
@@ -25,7 +26,6 @@ client.on('messageCreate', async msg => {
 });
 
 function search(needles, haystack) {
-  activateAfter5seconds();
   return needles.some(needle => haystack.includes(needle))
 }
 
