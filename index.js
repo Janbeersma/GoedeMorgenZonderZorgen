@@ -6,7 +6,7 @@ const reactions = require('./reactions.json');
 function activateAfter5seconds() {
   return new Promise(resolve => {
     setTimeout(() => {
-    }, 10000);
+    }, 5000);
   });
 }
 
@@ -15,7 +15,7 @@ client.on('ready', () => {
 });
 
 client.on('messageCreate', async msg => {
-  activateAfter5seconds();
+  const wait = activateAfter5seconds();
   if (msg.author.bot) return
 
   for (const [emoji, words] of Object.entries(reactions)) {
